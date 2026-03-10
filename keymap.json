@@ -1,0 +1,59 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+      "cmd-l": "pane::ActivateNextItem",
+      "cmd-h": "pane::ActivatePreviousItem",
+      "cmd-i": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::NewSearch",
+      "space c": "workspace::ToggleCenteredLayout",
+      "space D": "diagnostics::DeployCurrentFile",
+      "space p v": [
+        "task::Spawn",
+        { "task_name": "Open yazi", "reveal_target": "center" }
+      ],
+      "space t": [
+        "task::Spawn",
+        { "task_name": "Open zsh in current dir", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // "j k": "vim::SwitchToNormalMode"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Put key bindings here (in addition to the context above) if you want them to
+      // work when no editor exists.
+      "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  }
+]

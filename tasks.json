@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Open yazi",
+    "cwd": "$ZED_DIRNAME",
+    "command": "yazi",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "shell": {
+      "program": "bash"
+    }
+  },
+  {
+    "label": "Open zsh in current dir",
+    "cwd": "$ZED_DIRNAME",
+    "command": "zsh",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "shell": {
+      "program": "zsh"
+    }
+  }
+]
