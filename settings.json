@@ -7,6 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "opus"
+      },
+      "type": "registry",
+    },
+  },
   "auto_update": true,
   "relative_line_numbers": "enabled",
   "buffer_line_height": "standard",
@@ -18,35 +39,37 @@
     "tinymist": {
       "binary": {
         "path": "/opt/homebrew/bin/tinymist",
-        "arguments": []
+        "arguments": [],
       },
       "initialization_options": {
         "preview": {
           "background": {
-            "enabled": true
-          }
-        }
-      }
-    }
+            "enabled": true,
+          },
+        },
+      },
+    },
   },
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "grok-code-fast-1"
+      "model": "grok-code-fast-1",
     },
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
+      "model": "claude-sonnet-4-5",
     },
     "model_parameters": [],
-    "default_profile": "ask"
+    "default_profile": "ask",
   },
   "ui_font_size": 14,
   "buffer_font_size": 15.0,
   "theme": {
-    "mode": "light",
-    "light": "Catppuccin Latte",
-    "dark": "Bamboo Vulgaris"
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
   },
   // Rainbow Ident Coloring
   // "indent_guides": {
@@ -56,26 +79,33 @@
   // },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
   "languages": {
     "JavaScript": {
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
       },
-      "formatter": []
+      "formatter": [],
     },
     "TypeScript": {
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
       },
-      "formatter": []
+      "formatter": [],
     },
     "TSX": {
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
       },
-      "formatter": []
-    }
-  }
+      "formatter": [],
+    },
+  },
+
+  "terminal": {
+    "env": {
+      "CONDA_SHLVL": "0",
+      "CONDA_DEFAULT_ENV": "",
+    },
+  },
 }
